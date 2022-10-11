@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+{% block title %}Share a post{% endblock %}
+{% block content %}
+{% if messages %}
+ <ul class="messages">
+ {% for message in messages %}
+ <li class="{{ message.tags }}">
+ {{ message|safe }}
+ <a href="#" class="close">x</a>
+ </li>
+ {% endfor %}
+ </ul>
+{% endif %}
+<h1>Share "{{ post.title }}" by e-mail</h1>
+<form action="." method="post">
+    {{ form.as_table }}
+    {% csrf_token %}
+    <input type="submit" value="Send e-mail">
+</form>
+{% endblock %}
