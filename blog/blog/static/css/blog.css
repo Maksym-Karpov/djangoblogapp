@@ -54,7 +54,7 @@ label {
     color:#333;
     margin-bottom:4px;
 }
-input, textarea {
+input, textarea, select, span {
     clear:both;
     float:left;
     margin:0 0 10px;
@@ -63,6 +63,7 @@ input, textarea {
     padding:6px 10px;
     font-size:12px;
 }
+
 input[type=submit] {
     font-weight:bold;
     background:#00abff;
